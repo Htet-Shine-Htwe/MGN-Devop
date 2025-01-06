@@ -1,0 +1,9 @@
+# Use the official PostgreSQL image from Docker Hub
+FROM postgres:15
+
+# Copy custom configuration file to the container
+# COPY ./deployment/conf/postgresql.conf /etc/postgresql/postgresql.conf
+# # COPY init.sql /docker-entrypoint-initdb.d/
+
+# # Set the PostgreSQL configuration to use the custom file
+# CMD ["postgres", "-c", "config_file=/etc/postgresql/postgresql.conf"]
