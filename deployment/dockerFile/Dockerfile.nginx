@@ -1,0 +1,14 @@
+# Base NGINX image
+FROM nginx:alpine
+
+# Copy custom configuration file for NGINX
+COPY ./deployment/conf/default.conf /etc/nginx/conf.d/default.conf
+
+# Set the working directory
+WORKDIR /var/www/html
+
+# Expose port 80 inside the container
+EXPOSE 80
+
+# Start NGINX server
+CMD ["nginx", "-g", "daemon off;"]
